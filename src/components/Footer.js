@@ -26,7 +26,7 @@ function Footer() {
         
     </ul>
     <div>
-        <p className='text-neutral-300 text-xs md:text-sm text-center'>&copy; SpotLight {new Date().getFullYear()} | All rights reserved | <Link className='hover:text-accent hover:underline' target='_blank' to='https://github.com/pranaygoel02'>Pranay Goel</Link></p>
+        <p className='text-neutral-300 text-xs md:text-sm text-center'>&copy; SpotLight {new Date().getFullYear()} | All rights reserved | <Link className='hover:text-accent hover:underline' target='_blank' to='https://github.com/pranaygoel02'>A VNR Startup</Link></p>
     </div>
     </div>
   )

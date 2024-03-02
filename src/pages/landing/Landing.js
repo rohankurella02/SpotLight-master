@@ -83,12 +83,12 @@ function Landing() {
             style={{ flexBasis: "50%" }}
           >
             <h1 className=" text-2xl md:text-4xl lg:text-6xl text-slate-100 font-bold leading-relaxed lg:leading-normal drop-shadow-2xl">
-              Spotlight Your Creativity
+              Elevate Your College Experience 
               <br />
-              Curate Unforgettable Events
+              with Seamless Events Management!
             </h1>
             <p className=" md:max-w-[90%] py-4 text-slate-400">
-              RSVP and Management Made Effortless for Creators
+              RSVP and Management Made Effortless for Club Events, Workshops, Exhibitions, and More
             </p>
             <div className="inline-flex items-center gap-2">
               <Link

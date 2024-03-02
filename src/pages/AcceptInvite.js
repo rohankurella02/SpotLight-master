@@ -8,6 +8,7 @@ import { Databases } from "appwrite";
 import Loading from "../components/Loading";
 import Ticket from "../components/Ticket";
 import { useNotifications } from "../context/notificationContext";
+import { database_id, events_collection_id } from "../utils";
 
 function AcceptInvite() {
   const [searchParams] = useSearchParams();
@@ -40,13 +41,14 @@ function AcceptInvite() {
         setLoading((prev) => true);
         const database = new Databases(client);
         const response = await database.getDocument(
-          process.env.REACT_APP_DATABASE_ID,
-          process.env.REACT_APP_EVENTS_COLLECTION_ID,
+          database_id,
+          events_collection_id,
           eventId
         );
+        console.log({response})
         setEvent((prev) => response);
         const userResponse = await database.getDocument(
-          process.env.REACT_APP_DATABASE_ID,
+          database_id,
           process.env.REACT_APP_USERS_COLLECTION_ID,
           userId
         )
