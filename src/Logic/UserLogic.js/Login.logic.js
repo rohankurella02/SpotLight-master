@@ -63,7 +63,7 @@ function LoginLogic() {
       
       localStorage.setItem("token", JSON.stringify(loggedInResponse));
       toast.success("Logged in successfully");
-      const accountDetails = await account.get();
+      const accountDetails = await account.get()
       
       if (accountDetails.phoneVerification)
         navigate("/", { replace: true });

@@ -5,11 +5,12 @@ import GetMembershipLogic from "../../Logic/Membership/GetMembership.logic";
 import UserList from "../../components/UserList";
 import client from "../../appwrite.config";
 import { Teams } from "appwrite";
+import { useNavigate } from "react-router-dom";
 
 function Invites() {
   const { loading, error, teams, deleteInvitation } =
     GetMembershipLogic();
-
+  const navigate = useNavigate()
   const [teamId, setTeamId] = useState(null);
   const [memberships, setMemberships] = useState(null);
   const [loadingMemberships, setLoadingMemberships] = useState(false);
@@ -71,7 +72,9 @@ function Invites() {
                 <IoRemove />
                 <p>Delete Invitation</p>
               </button> */} 
-            </div>
+                <button onClick={() => navigate(`/dashboard/room/${team.$id}`)} className="primary-btn flex gap-2 items-center text-neutral-500 my-0">Join Meet</button>
+            </div> 
+            
           ))}
         </div>
       ) : (

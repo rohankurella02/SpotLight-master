@@ -24,6 +24,7 @@ import Ticket from "./components/Ticket";
 import Rsvps from "./pages/dashboard/Rsvp";
 import DashboardScreenLayout from "./layouts/DashboardScreenLayout";
 import MarkAttendance from "./pages/MarkAttendance";
+import Room from "./components/Room";
 
 function App() {
   return (
@@ -84,6 +85,15 @@ function App() {
                 <DashboardScreenLayout title={"Your RSVPs"}>
                   {" "}
                   <Rsvps />{" "}
+                </DashboardScreenLayout>
+              }
+            />
+            <Route
+              path="room/:roomid"
+              element={
+                <DashboardScreenLayout title={"Your Room"}>
+                  {" "}
+                  <Room />
                 </DashboardScreenLayout>
               }
             />
